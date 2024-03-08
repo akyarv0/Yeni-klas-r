@@ -46,25 +46,30 @@
   gap: 20px;
 }
 
-.table {
-  position: relative;
-  /* width: 80px;
-  height: 80px;
-  margin-top: 40px;
-  z-index: 1;
-  background-color: rgb(246, 166, 166);
-  padding: 20px;
-  border-radius: 5px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); */
 
-  /* display: none; */
-}
 .card {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
 
-table thead {
-  display: none;
+table {
+  /* display: none; */
+  position: absolute;
+  border: 1px solid rgb(19, 3, 91);
+  right: -0.75rem;
+  width: 25rem;
+  top: 4.7rem;
+  z-index: 1;
+  padding: 1rem;
+  background-color: ;
+
+  margin-top: 50px;
+}
+  
+
+
+i:hover {
+  cursor: pointer;
+
 }
 
 

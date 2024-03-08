@@ -19,10 +19,30 @@ let adet = document.querySelector(".adet");
 
 const applyCart = document.querySelector(".onay");
 
+const table = document.getElementsByName("table");//sepete tıklanınca table açılıp kapanması event ı ekleyebiliriz
+
+
+
+//! const shopCartBtn = document.querySelector(".shopcart");
+// console.log(shopCartBtn);
+
+
+const shopCartBtn = document.querySelector(".shopcart");
+
+
+shopCartBtn.addEventListener("click", () => {
+  const currentDisplayStyle = window.getComputedStyle(table).display;
+  table.style.display = currentDisplayStyle === "none" ? "block" : "none";
+});
+
+
 let cart = [];
 
 allBtns.forEach((btn) => {
   btn.addEventListener("click", (e) => {
+    
+
+
     let card = btn.closest(".card"); //kendi parentını buluyor
     let priceText = card.querySelector(".card-price").textContent; // fiyatını bulup içeriğini alıyor
     let title = card.querySelector(".card-title").textContent; //ürün ismini alıyor
@@ -65,8 +85,6 @@ allBtns.forEach((btn) => {
     countCell.textContent = itemValue;
     priceCell.textContent = "₺" + priceValue * itemValue;
 
-
-
     // adet toplamı
 
     adet.textContent = cart.length;
@@ -76,18 +94,9 @@ allBtns.forEach((btn) => {
     cart.forEach((item) => {
       sum += item.price * item.itemValue;
     });
-    cartSum.textContent = `Summary: ₺ ${sum}`;
+    cartSum.textContent = ` ₺ ${sum}`;
 
-    //silme butonu
-
-    deleteBtns.forEach((btn) => {
-      btn.addEventListener("click", (e) => {
-        
-
-      })
-    })
     
-
   });
 });
 
@@ -109,3 +118,6 @@ allSelects.forEach((selectEl) => {
 //    sepetToplam += item.itemValue;
 //  });
 //  sepet.textContent = `Cart: ${sepetToplam}`
+
+
+//silme butonu
