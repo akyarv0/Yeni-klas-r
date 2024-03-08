@@ -6,7 +6,7 @@ let countVal = Number(count.innerText);
 let allBtns = document.querySelectorAll(".btn");
 
 console.log(allBtns);
-let allSelects = document.querySelectorAll(".adet");
+// let allSelects = document.querySelectorAll(".adet");
 
 //Sepet son hali onay, toplam ürün, toplam fiyat ve silme butonu
 let deleteBtns = document.querySelectorAll(".delete");
@@ -19,7 +19,6 @@ let adet = document.querySelector(".adet");
 
 const applyCart = document.querySelector(".onay");
 
-const table = document.getElementsByName("table");//sepete tıklanınca table açılıp kapanması event ı ekleyebiliriz
 
 
 
@@ -112,12 +111,6 @@ allSelects.forEach((selectEl) => {
   });
 });
 
-//  //sepet toplamı
-//  let sepetToplam = "0";
-//  cart.forEach((item) => {
-//    sepetToplam += item.itemValue;
-//  });
-//  sepet.textContent = `Cart: ${sepetToplam}`
 
 
-//silme butonu
+
